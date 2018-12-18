@@ -69,6 +69,7 @@ function animation_menus_principaux() {
 
     
 	$("#menu_icon_left").click(function(event){
+        $("#menu_icon_left i").toggleClass("fa-angle-double-left").toggleClass("fa-angle-double-right");
         $("#navbarleft").css("transition", "width .4s");
         $("main").css("transition", "left .4s");
         if (countmenuicon % 2 == 0) {

@@ -19,8 +19,8 @@
   
 
 <nav id="navbartop" class="navbar navbar-expand">
-	<button id="bouton_menu_gauche" class=""  type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-	  <span class="navbar-toggler-icon"><i class="fas fa-bars" id="bars"></i></i></span>
+	<button id="bouton_menu_gauche" class="btn_menu_lateraux"  type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+	  <i class="fas fa-bars"></i>
 	</button>
 	<a class="navbar-brand" id="logo" href="#">
 		<img src="image.png" alt="Logo_ville" width="90px" />
@@ -63,8 +63,8 @@
 		</form> 
       </li>
     </ul>
-		<button id="bouton_menu_droit" class="m-0 " type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-	      <span class="navbar-toggler-icon"><i class="fas fa-bars" id="bars"></i></span>
+		<button id="bouton_menu_droit" class="btn_menu_lateraux" type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <i class="fas fa-bars"></i>
 	    </button>
 </nav>	
 
@@ -72,9 +72,9 @@
 	<div class="row">
 		
 	  	
-  		<nav class="navbar d-block p-0 m-0" id="navbarleft">
+		<nav class="navbar d-block p-0 m-0" id="navbarleft">
 			<div class="dropdown dropright">
-				<button class="btn btn-default dropdown-toggle w-100 text-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					<i class="fas fa-home"></i><span class="text_menu">Home</span>
 				</button>
 				<div class="dropdown-menu m-0" aria-labelledby="dropdownMenuButton">
@@ -84,7 +84,7 @@
 				</div>
 			</div>
 			<div class="dropdown dropright">
-				<button class="btn btn-default dropdown-toggle w-100 text-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fa fa-envelope"></i><span class="text_menu">A propos</span>
 				</button>
 				<div class="dropdown-menu m-0" aria-labelledby="dropdownMenuButton">
@@ -95,31 +95,29 @@
 			</div>
 		
 			<div class="dropdown dropright">
-					<button class="btn btn-default dropdown-toggle w-100 text-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<i class="fas fa-address-book"></i><span class="text_menu">Adress book</span>
-					</button>
-					<div class="dropdown-menu m-0" aria-labelledby="dropdownMenuButton">
-						<a class="dropdown-item" href="#">Action</a>
-						<a class="dropdown-item" href="#">Another action</a>
-						<a class="dropdown-item" href="#">Something else here</a>
-					</div>
+				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="fas fa-address-book"></i><span class="text_menu">Adress book</span>
+				</button>
+				<div class="dropdown-menu m-0" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<a class="dropdown-item" href="#">Something else here</a>
 				</div>
-				<div class="dropdown dropright">
-					<button class="btn btn-default dropdown-toggle w-100 text-light" type="button" id="Menu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			</div>
+			<div class="dropdown dropright">
+					<button class="btn btn-default dropdown-toggle" type="button" id="Menu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 					
 						<i class="fas fa-user"></i><span class="text_menu">User</span>
 					</button>
-					<div class="dropdown-menu m-0" aria-labelledby="dropdownMenuButton">
-						<a class="dropdown-item" href="#">Action</a>
-						<a class="dropdown-item" href="#">Another action</a>
-						<a class="dropdown-item" href="#">Something else here</a>
-					</div>
-					</div> 
-					<br/>
-					<button id="menu_icon_left"><i class="fas fa-angle-double-right" ></i></button>
+				<div class="dropdown-menu m-0" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<a class="dropdown-item" href="#">Something else here</a>
+				</div>
+			</div> 
+			<button id="menu_icon_left"><i class="fas fa-angle-double-left"></i></button>
 		</nav>
 		
-  
 
     
 		<main class="">
@@ -129,10 +127,10 @@
 								</div>
 								
 								<div class="dropdown dropright">
-									<button class="btn btn-default dropdown-toggle w-100 text-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										<i class="fas fa-home"></i><span class="text_menu">Home</span>
 									</button>
-									<div class="dropdown-menu m-0" aria-labelledby="dropdownMenuButton">
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 										<a class="dropdown-item" href="#">Action</a>
 										<a class="dropdown-item" href="#">Another action</a>
 										<a class="dropdown-item" href="#">Something else here</a>
@@ -154,7 +152,7 @@
 	  	
   		<nav class="navbar d-block  p-0 m-0" id="navbarright">
 				<div class="dropdown dropleft">
-					<button class="btn btn-default dropdown-toggle w-100 text-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fas fa-home"></i><span class="text_menu">Home</span>
 					</button>
 					<div class="dropdown-menu m-0" aria-labelledby="dropdownMenuButton">
@@ -163,7 +161,7 @@
 						<a class="dropdown-item" href="#">Something else here</a>
 					</div>
 					<div class="dropdown dropleft">
-						<button class="btn btn-default dropdown-toggle w-100 text-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fas fa-home"></i><span class="text_menu">Home</span>
 						</button>
 						<div class="dropdown-menu m-0" aria-labelledby="dropdownMenuButton">
@@ -172,7 +170,7 @@
 							<a class="dropdown-item" href="#">Something else here</a>
 						</div>
 						<div class="dropdown droprleft">
-							<button class="btn btn-default dropdown-toggle w-100 text-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i class="fas fa-home"></i><span class="text_menu">Home</span>
 							</button>
 							<div class="dropdown-menu m-0" aria-labelledby="dropdownMenuButton">
