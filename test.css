@@ -9,7 +9,6 @@ main {
   background-color: white;
 }
 #navbartop{
-  color:rgb(211,17,69); 
 }
 
 #navbarleft {
@@ -17,7 +16,6 @@ main {
   position:absolute;
   left:0px;
   height: 100%;
-  background-color:rgb(211,17,69);
 }
 
 #navbarright {
@@ -25,10 +23,6 @@ main {
   height: 100%;
   position:absolute;
   right:0px;
-  background-color: rgb(211,17,69);;
-}
-.navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;..");
 }
 
 
@@ -43,43 +37,46 @@ main {
 }
 
 /* BOOSTRAP */
-.dropdown:hover>.dropdown-menu {
-    display: block;
-  }
-.btn#menu1{
-border-radius: 0px;
-margin-bottom: 20px;
-  
+nav .dropdown:hover>.dropdown-menu {
+  display: block;
 }
-.dropdown-item:hover{
+
+nav .btn {
+  border-radius: 0px;
+  background-color: rgb(74,64,61);;
+}
+
+nav .dropdown-item:hover{
   background-color: blue;
 }
 
-.dropdown-menu{
+nav .dropdown-menu {
   background-color:rgb(211,17,69);
   border-width: 0px;
   border-radius: 0px;
 }
-.navbar-brand{
+
+.navbar-brand {
   left: 50%;
   position: relative;
   transform: translateX(-50%);
 }
-#bouton_menu_gauche{
+
+#bouton_menu_gauche {
   background-color:rgb(74,64,61);
   border-radius: 12px 0 12px 0;
 
 }
-#bouton_menu_droit{
+
+#bouton_menu_droit {
   background-color:rgb(74,64,61);
   border-radius: 12px 0 12px 0;
 }
-#bars{
+
+#bars {
   color:white;
 }
-.btn{
-  background-color: rgb(74,64,61);;
-}
+
 
 /* ICOMOON */
 
