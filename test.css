@@ -1,0 +1,145 @@
+body{
+  background-color:rgb(211,17,69);;
+}
+main {
+  padding: 10px;
+  position: absolute;
+  left: 200px;
+  right: 200px;
+  background-color: white;
+}
+#navbartop{
+  color:rgb(211,17,69); 
+}
+
+#navbarleft {
+  width:200px;
+  position:absolute;
+  left:0px;
+  height: 100%;
+  background-color:rgb(211,17,69);
+}
+
+#navbarright {
+  width:200px;
+  height: 100%;
+  position:absolute;
+  right:0px;
+  background-color: rgb(211,17,69);;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;..");
+}
+
+
+@media screen and (max-width: 768px) {
+ 
+}
+
+
+ 
+@media screen and (min-width: 768px) {
+
+}
+
+/* BOOSTRAP */
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+.btn#menu1{
+border-radius: 0px;
+margin-bottom: 20px;
+  
+}
+.dropdown-item:hover{
+  background-color: blue;
+}
+
+.dropdown-menu{
+  background-color:rgb(211,17,69);
+  border-width: 0px;
+  border-radius: 0px;
+}
+.navbar-brand{
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
+#bouton_menu_gauche{
+  background-color:rgb(74,64,61);
+  border-radius: 12px 0 12px 0;
+
+}
+#bouton_menu_droit{
+  background-color:rgb(74,64,61);
+  border-radius: 12px 0 12px 0;
+}
+#bars{
+  color:white;
+}
+.btn{
+  background-color: rgb(74,64,61);;
+}
+
+/* ICOMOON */
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts-icomoon/icomoon.eot?1p8yd7');
+    src:  url('fonts-icomoon/icomoon.eot?1p8yd7#iefix') format('embedded-opentype'),
+      url('fonts-icomoon/icomoon.ttf?1p8yd7') format('truetype'),
+      url('fonts-icomoon/icomoon.woff?1p8yd7') format('woff'),
+      url('fonts-icomoon/icomoon.svg?1p8yd7#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-home:before {
+    content: "\e900";
+  }
+  .icon-newspaper:before {
+    content: "\e904";
+  }
+  .icon-pencil:before {
+    content: "\e905";
+  }
+  .icon-quill:before {
+    content: "\e907";
+  }
+  .icon-image:before {
+    content: "\e90d";
+  }
+  .icon-film:before {
+    content: "\e913";
+  }
+  .icon-video-camera:before {
+    content: "\e914";
+  }
+  .icon-clubs:before {
+    content: "\e918";
+  }
+  .icon-book:before {
+    content: "\e91f";
+  }
+  .icon-library:before {
+    content: "\e921";
+  }
+  .icon-map:before {
+    content: "\e94b";
+  }
+  
