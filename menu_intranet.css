@@ -103,5 +103,9 @@ nav .dropdown-menu {
 
 #navbarleft button:hover{
   color: rgb(74,64,61);
+  cursor: pointer;
 }
+
+
+
 

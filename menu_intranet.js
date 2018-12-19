@@ -84,12 +84,16 @@ function animation_menus_principaux() {
             taille_menu_gauche = "grand";
         }
         countmenuicon++;
-
-        var menu = $("#navbarleft + div");
-        menu.toggleClass("dropdown").toggleClass("dropright");
-        $("#navbarleft button").toggleClass("btn").toggleClass("btn-default").toggleClass("dropdown-toggle");
-        menu.children("div").toggleClass("dropdown-menu").toggleClass("m-0");
-        menu.children("div").children("a").toggleClass("dropdown-item");
+        
+            var menu = $("#navbarleft div");
+            menu.toggleClass("dropdown").toggleClass("dropright");
+            $("#navbarleft button").toggleClass("btn").toggleClass("btn-default").toggleClass("dropdown-toggle");
+            menu.children("div").toggleClass("dropdown-menu").toggleClass("m-0");
+            menu.children("div").children("a").toggleClass("dropdown-item");
+        
+      
+        
+       
          
     });
 
@@ -146,6 +150,7 @@ function taille_fenetre() {
 $(document).ready(function() {
     animation_menus_principaux();
     taille_fenetre();
+   
 });
 
 
