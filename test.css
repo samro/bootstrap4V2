@@ -60,6 +60,9 @@ nav .btn_menu_lateraux{
 }
 
 /* BOOSTRAP */
+.text_menu{
+  margin-left: 6px;
+}
 nav .dropdown:hover>.dropdown-menu {
   display: block;
 }
@@ -89,7 +92,7 @@ nav .dropdown-menu {
 
 .navbar-brand {
   left: 50%;
-  position: relative;
+  position: absolute;
   transform: translateX(-50%);
 }
 #navbarleft button, #navbarright button {
