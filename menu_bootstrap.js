@@ -1,5 +1,3 @@
-var countleft = 0;
-var countright = 0;
 var countmenuicon = 0;
 var action_utilisateur_gauche = "";
 var taille_menu_gauche = ""
@@ -23,7 +21,6 @@ function animation_menus_principaux() {
                 action_utilisateur_gauche = "l'utilisateur a affiche le menu";     
             }
         }
-        countleft++;
 
         $("main, #navbarleft").css("transition", "left .4s");// methode css qui prend deux valeur(proprite,)
         if ( $("#navbarleft").css("left") == '0px' ) {
@@ -54,7 +51,6 @@ function animation_menus_principaux() {
                 action_utilisateur_droit = "l'utilisateur a affiche le menu";     
             }
         }
-        countright++;
     
 
       $("main, #navbarright").css("transition", "right .4s");// methode css qui prend deux valeur(proprite,)
@@ -88,6 +84,20 @@ function animation_menus_principaux() {
 
 }
 
+
+//fonction appliquee une fois au chargement de la page
+// pour savoir si les menu doivent être visibles
+function etat_menu() {
+    if($(window).width() <= 768) {
+        $("#navbarleft").css("left", "-200px");
+        $("#navbarright").css("right", "-200px");
+        $("main").css("left", "0px").css("right","0px"); 
+    } else {
+        $("#navbarleft").css("left", "0px");
+        $("#navbarright").css("right", "0px");
+        $("main").css("left", "200px").css("right","200px"); 
+    }
+}
 
 //fonction appliquee a chaque changement de la taille de la fenetre(.resize)
 //pour rendre visible ou masque les menu droit et gauche
@@ -139,6 +149,7 @@ function taille_fenetre() {
 $(document).ready(function() {
     animation_menus_principaux();
     taille_fenetre();
+    etat_menu();
 });
 
 
