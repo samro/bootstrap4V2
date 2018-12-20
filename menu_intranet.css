@@ -46,6 +46,32 @@ nav .btn_menu_lateraux{
   margin: 0px 10px;
 }
 
+/* menu intranet navbarleft */
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 600px;
+  height: 800px;
+}
+#menus_peres {
+  width: 100px;
+  border: 1px solid purple;
+}
+#menus_enfants {
+  flex:1;
+  border:1px solid purple;
+  overflow: auto;
+}
+#bloc3 {
+  flex:2;
+  border:1px solid purple;
+}
+#bloc4 {
+  flex:1;
+  border:1px solid purple;
+}
+
 
 
 
