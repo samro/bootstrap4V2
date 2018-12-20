@@ -31,11 +31,17 @@ main {
   border: 1px solid rgb(74,64,61); /* ne pas enlever sinon une bande transparente apparait*/
   padding: 2px;
 }
+#menu_icon_left:hover {
+  background-color:white;
+  border: 1px solid white; /* ne pas enlever sinon une bande transparente apparait*/
+}
 
 #menu_icon_left i{
   float:right;
   color: white;
-
+}
+#menu_icon_left:hover i{
+  color: rgb(74,64,61);
 }
 
 nav .btn_menu_lateraux{
