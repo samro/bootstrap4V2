@@ -9,6 +9,7 @@ main {
   background-color: white;
 }
 
+
 /* menu intranet navbarleft */
 #navbarleft {
   width:200px;
@@ -20,12 +21,34 @@ main {
   display: flex;
 }
 #navbarleft_menus_peres {
-  width: 35px;
-  border: 1px solid black;
+  width: 40px;
 }
+#navbarleft button {
+  color: white;
+  width: 100%;
+}
+#navbarleft button:hover{
+  color: rgb(74,64,61);
+  cursor: pointer;
+}
+.navbarleft_menus_peres + div {
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+}
+.navbarleft_menus_peres_button{
+  background-color: rgb(74,64,61);
+  border: 1px solid rgb(74,64,61); /* ne pas enlever sinon une bande transparente apparait*/
+  padding: 0.375rem 0.75rem;
+}
+.navbarleft_menus_peres_button:hover{
+  background-color:white;
+  border: 1px solid white; /* ne pas enlever sinon une bande transparente apparait*/
+}
+
+
 #navbarleft_menus_enfants {
   flex:1;
-  background-color: white;
+  background-color:white;
 }
 #navbarleft_menus_enfants a {
   display: block;
@@ -39,7 +62,7 @@ main {
   background-color: rgb(74,64,61);
   border: 1px solid rgb(74,64,61); /* ne pas enlever sinon une bande transparente apparait*/
   padding: 2px;
-  margin-right: 2px; 
+  margin-right: 2px;
 }
 #menu_icon_left:hover {
   background-color:white;
@@ -52,7 +75,7 @@ main {
 #menu_icon_left:hover i{
   color: rgb(74,64,61);
 }
-
+/************************/
 
 
 /* navbarright */
@@ -100,6 +123,7 @@ nav .btn{
   border-radius: 0px;
   background-color: rgb(74,64,61);
   text-align: left;
+
 }
 
 nav .btn:hover{
@@ -124,16 +148,9 @@ nav .dropdown-menu {
   position: absolute;
   transform: translateX(-50%);
 }
-#navbarleft button, #navbarright button {
-  color: white;
-  width: 100%;
-  margin: 0px;
-}
 
-#navbarleft button:hover{
-  color: rgb(74,64,61);
-  cursor: pointer;
-}
+
+
 
 
 

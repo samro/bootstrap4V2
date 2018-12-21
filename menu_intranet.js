@@ -3,6 +3,7 @@ var action_utilisateur_gauche = "";
 var taille_menu_gauche = ""
 var taille_menu_droit = "";
 var action_utilisateur_droit = "";
+var lg_petit_menu_left = "40px";
 
 function affiche_menu_enfant() {
     if ( $(window).width() > 576 ) { //small device
@@ -44,7 +45,7 @@ function animation_menus_principaux() {
         } else {
             $("#navbarleft").css("left", "0px");
             if (taille_menu_gauche == 'petit') {
-                $("main").css("left", "35px");
+                $("main").css("left", lg_petit_menu_left);
             } else {
                 $("main").css("left", "200px");
             }
@@ -78,6 +79,15 @@ function animation_menus_principaux() {
       }
     });
 
+    function affiche_menu_enfant() {
+        $("#navbarleft_menus_peres button").hover(function(event){
+            $("#navbarleft_menus_enfants").html( $(this).next().html() );
+            $("#navbarleft_menus_enfants a").addClass("dropdown-item");
+        });   
+    }
+
+
+    
 	$("#menu_icon_left").click(function(event){
         var menu = $("#navbarleft div");
 
@@ -85,24 +95,26 @@ function animation_menus_principaux() {
         $("#navbarleft").css("transition", "width .4s");
         $("main").css("transition", "left .4s");
         if (countmenuicon % 2 == 0) {
-            $("#navbarleft").css("width", "35px");
-            $("main").css("left", "35px");
+            $("#navbarleft").css("width", lg_petit_menu_left);
+            $("main").css("left", lg_petit_menu_left);
             $("#navbarleft_menus_peres div[aria-labelledby='dropdownMenuButton']").removeClass("menu_cache");
             $("#navbarleft_menus_enfants").css("display", "none");
+            $("#navbarleft_menus_peres button").removeClass("navbarleft_menus_peres_button");
             taille_menu_gauche = "petit";
         } else {
             $("#navbarleft").css("width", "200px");
             $("main").css("left", "200px");
             $("#navbarleft_menus_enfants").css("display", "block");
             $("#navbarleft_menus_peres div[aria-labelledby='dropdownMenuButton']").addClass("menu_cache");
+            $("#navbarleft_menus_peres button").addClass("navbarleft_menus_peres_button");
             taille_menu_gauche = "grand";
             affiche_menu_enfant();
         }
         countmenuicon++;
-    
+
         menu.toggleClass("dropdown").toggleClass("dropright");
         menu.children("button").toggleClass("btn").toggleClass("btn-default").toggleClass("dropdown");
-        $("#navbarleft div[aria-labelledby='dropdownMenuButton']").toggleClass("dropdown-menu").toggleClass("m-0");
+        $("#navbarleft div[aria-labelledby='dropdownMenuButton']").toggleClass("dropdown-menu");
         $("#navbarleft_menus_peres div[aria-labelledby='dropdownMenuButton']").children("a").toggleClass("dropdown-item");    
     });
 
@@ -113,6 +125,8 @@ function animation_menus_principaux() {
 function etat_menu() {
     $("#navbarleft_menus_peres div[aria-labelledby='dropdownMenuButton']").addClass("menu_cache");
     $("#navbarleft_menus_enfants").html( $("#navbarleft_menus_peres button").first().next().html() );
+    $("#navbarleft_menus_enfants a").addClass("dropdown-item");
+    $("#navbarleft_menus_peres button").addClass("navbarleft_menus_peres_button");
     if($(window).width() <= 768) {
         $("#navbarleft").css("left", "-200px");
         $("#navbarright").css("right", "-200px");
@@ -136,7 +150,7 @@ function taille_fenetre() {
             if(action_utilisateur_gauche == "l'utilisateur a affiche le menu" ){
                 $("#navbarleft").css("left", "0px");
                 if (taille_menu_gauche == 'petit') {
-                    $("main").css("left", "50px");
+                    $("main").css("left", lg_petit_menu_left);
                 } else {
                     $("main").css("left", "200px");
                 }
@@ -156,7 +170,7 @@ function taille_fenetre() {
             if(action_utilisateur_gauche != "l'utilisateur a masque le menu") {
                 $("#navbarleft").css("left", "0px");
                 if (taille_menu_gauche == 'petit') {
-                    $("main").css("left", "50px");
+                    $("main").css("left", lg_petit_menu_left);
                 } else {
                     $("main").css("left", "200px");
                 }
