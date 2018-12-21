@@ -4,7 +4,17 @@ var taille_menu_gauche = ""
 var taille_menu_droit = "";
 var action_utilisateur_droit = "";
 
-
+function affiche_menu_enfant() {
+    if ( $(window).width() > 576 ) { //small device
+        $("#navbarleft_menus_peres button").hover(function(event){
+            $("#navbarleft_menus_enfants").html( $(this).next().html() );
+        });   
+    } else {
+        $("#navbarleft_menus_peres button").click(function(event){
+            $("#navbarleft_menus_enfants").html( $(this).next().html() );
+        }); 
+    }
+}
 
 function animation_menus_principaux() {
 	$("#bouton_menu_gauche").click(function(event){
@@ -22,7 +32,7 @@ function animation_menus_principaux() {
             }
         }
 
-        $("main, #navbarleft").css("transition", "left .4s");// methode css qui prend deux valeur(proprite,)
+        $("main, #navbarleft").css("transition", "left .4s");
         if ( $("#navbarleft").css("left") == '0px' ) {
             $("main").css("left", "0px");
             if (taille_menu_gauche == 'petit') {
@@ -58,7 +68,7 @@ function animation_menus_principaux() {
         }
     
 
-      $("main, #navbarright").css("transition", "right .4s");// methode css qui prend deux valeur(proprite,)
+      $("main, #navbarright").css("transition", "right .4s");
       if ( $("#navbarright").css("right") == '0px' ) {
           $("#navbarright").css("right", "-200px");
           $("main").css("right", "0px");
@@ -68,14 +78,6 @@ function animation_menus_principaux() {
       }
     });
 
-    function affiche_menu_enfant() {
-        $("#navbarleft_menus_peres button").hover(function(event){
-            $("#navbarleft_menus_enfants").html( $(this).next().html() );
-        });   
-    }
-
-
-    
 	$("#menu_icon_left").click(function(event){
         var menu = $("#navbarleft div");
 
@@ -110,6 +112,7 @@ function animation_menus_principaux() {
 // pour savoir si les menu doivent être visibles
 function etat_menu() {
     $("#navbarleft_menus_peres div[aria-labelledby='dropdownMenuButton']").addClass("menu_cache");
+    $("#navbarleft_menus_enfants").html( $("#navbarleft_menus_peres button").first().next().html() );
     if($(window).width() <= 768) {
         $("#navbarleft").css("left", "-200px");
         $("#navbarright").css("right", "-200px");
