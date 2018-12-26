@@ -1,5 +1,10 @@
+/* couleur de base 
+  rgb(74,64,61)
+  rgb(211,17,69)
+*/
+
 body{
-  background-color:rgb(211,17,69);;
+  background-color:rgb(211,17,69);
 }
 main {
   padding: 10px;
@@ -7,6 +12,27 @@ main {
   left: 200px;
   right: 200px;
   background-color: white;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+/* navbartop */
+
+nav .btn_menu_lateraux {
+  cursor: pointer;
+  background-color: transparent;
+  color:white;
+  border: none;
+  padding: 4px 8px;
+  margin: 0px 10px;
+}
+nav .btn_menu_lateraux:hover {
+  background-color: white;
+  color:rgb(211,17,69);
+  border-radius: 4px;
+  box-shadow: 0px 0px 6px #000 inset;
 }
 
 
@@ -15,7 +41,6 @@ main {
   width:200px;
   position:absolute;
   left:0px;
-  height: 100%;
 }
 #container_menus {
   display: flex;
@@ -28,16 +53,16 @@ main {
   width: 100%;
 }
 #navbarleft button:hover{
-  color: rgb(74,64,61);
+  color: rgb(211,17,69);
   cursor: pointer;
 }
-.navbarleft_menus_peres + div {
+.navbarleft_menus_peres + div { /* premier élément div enfant de .navbarleft_menus_peres*/
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
 }
 .navbarleft_menus_peres_button{
-  background-color: rgb(74,64,61);
-  border: 1px solid rgb(74,64,61); /* ne pas enlever sinon une bande transparente apparait*/
+  background-color: transparent;
+  border: 1px solid transparent; /* ne pas enlever sinon une bande transparente apparait*/
   padding: 0.375rem 0.75rem;
 }
 .navbarleft_menus_peres_button:hover{
@@ -49,18 +74,24 @@ main {
 #navbarleft_menus_enfants {
   flex:1;
   background-color:white;
+  border-top-right-radius: 4px;
+  box-shadow: 0px 0px 6px #000 inset;
 }
 #navbarleft_menus_enfants a {
   display: block;
 }
+#navbarleft_menus_enfants a:first-child{
+  border-top-right-radius: 4px;
+}
+
 .menu_cache {
   display: none;
 }
 
 #menu_icon_left {
   width: 100%;
-  background-color: rgb(74,64,61);
-  border: 1px solid rgb(74,64,61); /* ne pas enlever sinon une bande transparente apparait*/
+  background-color: transparent;
+  border: 1px solid transparent; /* ne pas enlever sinon une bande transparente apparait*/
   padding: 2px;
   margin-right: 2px;
 }
@@ -73,7 +104,7 @@ main {
   color: white;
 }
 #menu_icon_left:hover i{
-  color: rgb(74,64,61);
+  color: rgb(211,17,69);
 }
 /************************/
 
@@ -87,14 +118,6 @@ main {
 }
 
 
-
-nav .btn_menu_lateraux{
-  background-color:rgb(74,64,61);
-  border: none;
-  padding: 4px 8px;
-  color:white;
-  margin: 0px 10px;
-}
 
 
 
@@ -112,42 +135,49 @@ nav .btn_menu_lateraux{
 }
 
 /* BOOSTRAP */
-.text_menu{
-  margin-left: 6px;
-}
-nav .dropdown:hover>.dropdown-menu {
-  display: block;
-}
-
-nav .btn{
-  border-radius: 0px;
-  background-color: rgb(74,64,61);
-  text-align: left;
-
-}
-
-nav .btn:hover{
-  background-color: white;
-}
-
-nav .dropdown-item:hover{
-  color:red;
-}
-
-nav .dropdown-menu {
-  background-color:white;
-  border-width: 0px;
-  border-radius: 0px;
-  /*border:1px solid rgb(74,64,61);*/
-  border-left:none;
-  box-shadow: 0px 0px 10px #555;
-}
 
 .navbar-brand {
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
 }
+
+
+/*nav .dropdown:hover>.dropdown-menu {
+  display: block;
+}*/
+
+nav .btn{
+  border-radius: 0px;
+  /*background-color: rgb(74,64,61);*/
+  background-color: transparent;
+  text-align: left;
+
+}
+
+nav .btn:hover{
+  background-color: white;
+  border: 1px solid white; /* ne pas enlever sinon une bande transparente apparait*/
+  color: rgb(74,64,61);
+}
+
+nav .dropdown-menu {
+  background-color:white;
+  border-width: 0px;
+  border-radius: 0px;
+  /*border:1px solid rgb(74,64,61);
+  border-left:none;*/
+  box-shadow: 0px 0px 10px #555;
+}
+nav .dropdown-item {
+  padding-left: 10px;
+  white-space: normal;
+}
+nav .dropdown-item:hover{
+  color:red;
+  background-color:transparent;
+}
+
 
 
 

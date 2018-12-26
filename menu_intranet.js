@@ -6,13 +6,15 @@ var action_utilisateur_droit = "";
 var lg_petit_menu_left = "40px";
 
 function affiche_menu_enfant() {
-    if ( $(window).width() > 576 ) { //small device
+    if ( $(window).width() > 768 ) { //tablette et téléphone
         $("#navbarleft_menus_peres button").hover(function(event){
             $("#navbarleft_menus_enfants").html( $(this).next().html() );
+            $("#navbarleft_menus_enfants a").addClass("dropdown-item");
         });   
     } else {
-        $("#navbarleft_menus_peres button").click(function(event){
+        $("#navbarleft_menus_peres button").click(function(event){ //car hover n'est pas possible sur un téléphone ou une tablette
             $("#navbarleft_menus_enfants").html( $(this).next().html() );
+            $("#navbarleft_menus_enfants a").addClass("dropdown-item");
         }); 
     }
 }
@@ -78,14 +80,6 @@ function animation_menus_principaux() {
           $("main").css("right", "200px");
       }
     });
-
-    function affiche_menu_enfant() {
-        $("#navbarleft_menus_peres button").hover(function(event){
-            $("#navbarleft_menus_enfants").html( $(this).next().html() );
-            $("#navbarleft_menus_enfants a").addClass("dropdown-item");
-        });   
-    }
-
 
     
 	$("#menu_icon_left").click(function(event){
