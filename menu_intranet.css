@@ -21,36 +21,36 @@ main {
 
 /* toute nav */
 
-nav button, nav .btn {
+nav button, nav .btn, nav .nav-link {
   color: white;
-  text-shadow: 2px 2px 2px black;
   background-color: transparent;
   border: none;
-  box-shadow: none;
 }
-nav button:hover, nav button:active, nav button:focus, nav .btn:hover, nav .btn:active, nav .btn:focus {
+nav button:hover, nav button:active, nav button:focus, nav .btn:hover, nav .btn:active, nav .btn:focus, nav .nav-link:hover, nav .nav-link:active, nav .nav-link:focus {
+  cursor: pointer;
+  outline: 0; /* valable uniquement pour focus */
+  border-radius: 4px;
   background-color: white;
   color: rgb(211,17,69);
-  cursor: pointer;
-  box-shadow: 0px 0px 6px #000 inset;
-  border-radius: 4px;
+  box-shadow: none;
 }
 
 /* navbartop */
 
-nav .btn_menu_lateraux {
+#navbartop .btn,#navbartop .btn_menu_lateraux, #navbartop .nav-link, #navbartop #barre_recherche {
+  margin: 0px 1px;
   padding: 4px 8px;
-  margin: 0px 10px;
-}
-#navbartop .btn {
-  margin: 0px 10px;
-}
-#barre_recherche .btn {
-  margin: 0;
-  margin-left: 2px;
-  border-radius: 0px 4px 4px 0px;
 }
 
+#barre_recherche .btn {
+  margin: 0;
+  margin-right: 4px;
+  border-radius: 0px 4px 4px 0px;
+  border: 1px solid white;
+}
+nav .form-control {
+  border: none;
+}
 
 /* menu intranet navbarleft */
 #navbarleft {
@@ -66,9 +66,10 @@ nav .btn_menu_lateraux {
 }
 
 #navbarleft button {
+  font-size: 20px;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  margin-bottom: 2px;
+  border-radius: 0px ;
 }
 
 .navbarleft_menus_peres + div { /* premier élément div enfant de .navbarleft_menus_peres*/
@@ -79,11 +80,10 @@ nav .btn_menu_lateraux {
 
 #navbarleft_menus_enfants {
   flex:1;
-  background-color:white;
-  border-radius: 4px;
-  box-shadow: 0px 0px 6px #000 inset;
-  margin-bottom: 2px;
-  margin-left: 4px;
+  border-radius: 0px 4px 4px 0px;
+}
+#navbarleft_menus_enfants, #navbarleft .dropdown-menu {
+  background-color: white;
 }
 #navbarleft_menus_enfants a {
   display: block;
@@ -99,19 +99,16 @@ nav .btn_menu_lateraux {
 #menu_icon_left {
   width: 100%;
   background-color: transparent;
-  padding: 2px;
-  margin-right: 2px;
+  padding: 0;
+  margin: 0;
 }
 #menu_icon_left:hover, #menu_icon_left:active, #menu_icon_left:focus {
-  background-color:white;
-  border: none;
+  border-radius: 0px;
 }
 #menu_icon_left i{
   float:right;
   color: white;
-}
-#menu_icon_left:hover i, #menu_icon_left:active i, #menu_icon_left:focus i{
-  color: rgb(211,17,69);
+  font-size: 16px;
 }
 /************************/
 
@@ -150,14 +147,20 @@ nav .btn_menu_lateraux {
 }
 
 
-/*nav .dropdown:hover>.dropdown-menu {
+nav .dropdown:hover>.dropdown-menu {
   display: block;
-}*/
+}
 
-
-
+#barre_recherche .form-control {
+  padding: 0rem 0.75rem;
+}
+#barre_recherche .form-control:focus {
+  box-shadow: 0px 0px 6px rgb(0,0,0) inset;
+  border: 1px solid white;
+  border-right: none;
+}
 nav .dropdown-menu {
-  background-color:white;
+  /* background-color: définit plus haut avec #navbarleft */
   border-width: 0px;
   border-radius: 0px;
   box-shadow: 0px 0px 10px #555;
@@ -165,7 +168,7 @@ nav .dropdown-menu {
 #navbarleft .dropdown-menu {
   border-radius: 0px 6px 6px 0px;
   box-shadow: 4px 0px 6px #555;
-  margin-left: 4px;
+  margin-left: -1px;
 }
 
 nav .dropdown-item {
@@ -173,7 +176,7 @@ nav .dropdown-item {
   white-space: normal;
 }
 nav .dropdown-item:hover{
-  color:red;
+  color:rgb(211,17,69);
   background-color:transparent;
 }
 

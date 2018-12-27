@@ -9,12 +9,10 @@ function affiche_menu_enfant() {
     if ( $(window).width() > 768 ) { //tablette et téléphone
         $("#navbarleft_menus_peres button").hover(function(event){
             $("#navbarleft_menus_enfants").html( $(this).next().html() );
-            $("#navbarleft_menus_enfants a").addClass("dropdown-item");
         });   
     } else {
         $("#navbarleft_menus_peres button").click(function(event){ //car hover n'est pas possible sur un téléphone ou une tablette
             $("#navbarleft_menus_enfants").html( $(this).next().html() );
-            $("#navbarleft_menus_enfants a").addClass("dropdown-item");
         }); 
     }
 }
@@ -85,7 +83,7 @@ function animation_menus_principaux() {
 	$("#menu_icon_left").click(function(event){
         var menu = $("#navbarleft div");
 
-        $("#menu_icon_left i").toggleClass("fa-angle-double-left").toggleClass("fa-angle-double-right");
+        $("#menu_icon_left i").toggleClass("fa-angle-left").toggleClass("fa-angle-right");
         $("#navbarleft").css("transition", "width .4s");
         $("main").css("transition", "left .4s");
         if (countmenuicon % 2 == 0) {
@@ -107,7 +105,6 @@ function animation_menus_principaux() {
         menu.toggleClass("dropdown").toggleClass("dropright");
         menu.children("button").toggleClass("btn").toggleClass("btn-default").toggleClass("dropdown");
         $("#navbarleft div[aria-labelledby='dropdownMenuButton']").toggleClass("dropdown-menu");
-        $("#navbarleft_menus_peres div[aria-labelledby='dropdownMenuButton']").children("a").toggleClass("dropdown-item");    
     });
 
 }
@@ -117,7 +114,6 @@ function animation_menus_principaux() {
 function etat_menu() {
     $("#navbarleft_menus_peres div[aria-labelledby='dropdownMenuButton']").addClass("menu_cache");
     $("#navbarleft_menus_enfants").html( $("#navbarleft_menus_peres button").first().next().html() );
-    $("#navbarleft_menus_enfants a").addClass("dropdown-item");
     if($(window).width() <= 768) {
         $("#navbarleft").css("left", "-200px");
         $("#navbarright").css("right", "-200px");
