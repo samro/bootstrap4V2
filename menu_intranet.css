@@ -21,14 +21,14 @@ main {
 
 /* toute nav */
 
-nav button {
+nav button, nav .btn {
   color: white;
   text-shadow: 2px 2px 2px black;
   background-color: transparent;
   border: none;
   box-shadow: none;
 }
-nav button:hover, nav button:active, nav button:active {
+nav button:hover, nav button:active, nav button:focus, nav .btn:hover, nav .btn:active, nav .btn:focus {
   background-color: white;
   color: rgb(211,17,69);
   cursor: pointer;
@@ -41,6 +41,14 @@ nav button:hover, nav button:active, nav button:active {
 nav .btn_menu_lateraux {
   padding: 4px 8px;
   margin: 0px 10px;
+}
+#navbartop .btn {
+  margin: 0px 10px;
+}
+#barre_recherche .btn {
+  margin: 0;
+  margin-left: 2px;
+  border-radius: 0px 4px 4px 0px;
 }
 
 
@@ -58,22 +66,11 @@ nav .btn_menu_lateraux {
 }
 
 #navbarleft button {
-  color: white;
   width: 100%;
-  text-shadow: 2px 2px 2px black;
-  background-color: transparent;
-  border: none;
   padding: 0.375rem 0.75rem;
-  box-shadow: none;
   margin-bottom: 2px;
 }
-#navbarleft button:hover, #navbarleft button:active, #navbarleft button:active {
-  background-color: white;
-  color: rgb(211,17,69);
-  cursor: pointer;
-  box-shadow: 0px 0px 6px #000 inset;
-  border-radius: 4px;
-}
+
 .navbarleft_menus_peres + div { /* premier élément div enfant de .navbarleft_menus_peres*/
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
@@ -105,7 +102,7 @@ nav .btn_menu_lateraux {
   padding: 2px;
   margin-right: 2px;
 }
-#menu_icon_left:hover {
+#menu_icon_left:hover, #menu_icon_left:active, #menu_icon_left:focus {
   background-color:white;
   border: none;
 }
@@ -113,7 +110,7 @@ nav .btn_menu_lateraux {
   float:right;
   color: white;
 }
-#menu_icon_left:hover i{
+#menu_icon_left:hover i, #menu_icon_left:active i, #menu_icon_left:focus i{
   color: rgb(211,17,69);
 }
 /************************/
@@ -157,19 +154,7 @@ nav .btn_menu_lateraux {
   display: block;
 }*/
 
-nav .btn{
-  border-radius: 0px;
-  /*background-color: rgb(74,64,61);*/
-  background-color: transparent;
-  text-align: left;
 
-}
-
-nav .btn:hover{
-  background-color: white;
-  border: 1px solid white; /* ne pas enlever sinon une bande transparente apparait*/
-  color: rgb(74,64,61);
-}
 
 nav .dropdown-menu {
   background-color:white;
