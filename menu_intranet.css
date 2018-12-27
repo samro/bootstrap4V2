@@ -16,23 +16,31 @@ main {
   border-top-right-radius: 4px;
   margin-right: 4px;
   margin-left: 4px;
+  box-shadow: 0px 0px 6px #000 inset;
+}
+
+/* toute nav */
+
+nav button {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+nav button:hover, nav button:active, nav button:active {
+  background-color: white;
+  color: rgb(211,17,69);
+  cursor: pointer;
+  box-shadow: 0px 0px 6px #000 inset;
+  border-radius: 4px;
 }
 
 /* navbartop */
 
 nav .btn_menu_lateraux {
-  cursor: pointer;
-  background-color: transparent;
-  color:white;
-  border: none;
   padding: 4px 8px;
   margin: 0px 10px;
-}
-nav .btn_menu_lateraux:hover {
-  background-color: white;
-  color:rgb(211,17,69);
-  border-radius: 4px;
-  box-shadow: 0px 0px 6px #000 inset;
 }
 
 
@@ -48,34 +56,37 @@ nav .btn_menu_lateraux:hover {
 #navbarleft_menus_peres {
   width: 40px;
 }
+
 #navbarleft button {
   color: white;
   width: 100%;
+  text-shadow: 2px 2px 2px black;
+  background-color: transparent;
+  border: none;
+  padding: 0.375rem 0.75rem;
+  box-shadow: none;
+  margin-bottom: 2px;
 }
-#navbarleft button:hover{
+#navbarleft button:hover, #navbarleft button:active, #navbarleft button:active {
+  background-color: white;
   color: rgb(211,17,69);
   cursor: pointer;
+  box-shadow: 0px 0px 6px #000 inset;
+  border-radius: 4px;
 }
 .navbarleft_menus_peres + div { /* premier élément div enfant de .navbarleft_menus_peres*/
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-}
-.navbarleft_menus_peres_button{
-  background-color: transparent;
-  border: 1px solid transparent; /* ne pas enlever sinon une bande transparente apparait*/
-  padding: 0.375rem 0.75rem;
-}
-.navbarleft_menus_peres_button:hover{
-  background-color:white;
-  border: 1px solid white; /* ne pas enlever sinon une bande transparente apparait*/
 }
 
 
 #navbarleft_menus_enfants {
   flex:1;
   background-color:white;
-  border-top-right-radius: 4px;
+  border-radius: 4px;
   box-shadow: 0px 0px 6px #000 inset;
+  margin-bottom: 2px;
+  margin-left: 4px;
 }
 #navbarleft_menus_enfants a {
   display: block;
@@ -91,13 +102,12 @@ nav .btn_menu_lateraux:hover {
 #menu_icon_left {
   width: 100%;
   background-color: transparent;
-  border: 1px solid transparent; /* ne pas enlever sinon une bande transparente apparait*/
   padding: 2px;
   margin-right: 2px;
 }
 #menu_icon_left:hover {
   background-color:white;
-  border: 1px solid white; /* ne pas enlever sinon une bande transparente apparait*/
+  border: none;
 }
 #menu_icon_left i{
   float:right;
@@ -165,10 +175,14 @@ nav .dropdown-menu {
   background-color:white;
   border-width: 0px;
   border-radius: 0px;
-  /*border:1px solid rgb(74,64,61);
-  border-left:none;*/
   box-shadow: 0px 0px 10px #555;
 }
+#navbarleft .dropdown-menu {
+  border-radius: 0px 6px 6px 0px;
+  box-shadow: 4px 0px 6px #555;
+  margin-left: 4px;
+}
+
 nav .dropdown-item {
   padding-left: 10px;
   white-space: normal;
@@ -177,6 +191,8 @@ nav .dropdown-item:hover{
   color:red;
   background-color:transparent;
 }
+
+
 
 
 

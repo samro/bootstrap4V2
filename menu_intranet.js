@@ -93,14 +93,12 @@ function animation_menus_principaux() {
             $("main").css("left", lg_petit_menu_left);
             $("#navbarleft_menus_peres div[aria-labelledby='dropdownMenuButton']").removeClass("menu_cache");
             $("#navbarleft_menus_enfants").css("display", "none");
-            $("#navbarleft_menus_peres button").removeClass("navbarleft_menus_peres_button");
             taille_menu_gauche = "petit";
         } else {
             $("#navbarleft").css("width", "200px");
             $("main").css("left", "200px");
             $("#navbarleft_menus_enfants").css("display", "block");
             $("#navbarleft_menus_peres div[aria-labelledby='dropdownMenuButton']").addClass("menu_cache");
-            $("#navbarleft_menus_peres button").addClass("navbarleft_menus_peres_button");
             taille_menu_gauche = "grand";
             affiche_menu_enfant();
         }
@@ -120,7 +118,6 @@ function etat_menu() {
     $("#navbarleft_menus_peres div[aria-labelledby='dropdownMenuButton']").addClass("menu_cache");
     $("#navbarleft_menus_enfants").html( $("#navbarleft_menus_peres button").first().next().html() );
     $("#navbarleft_menus_enfants a").addClass("dropdown-item");
-    $("#navbarleft_menus_peres button").addClass("navbarleft_menus_peres_button");
     if($(window).width() <= 768) {
         $("#navbarleft").css("left", "-200px");
         $("#navbarright").css("right", "-200px");
