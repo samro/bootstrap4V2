@@ -37,7 +37,7 @@ nav button:hover, nav button:active, nav button:focus, nav .btn:hover, nav .btn:
 
 /* navbartop */
 
-#navbartop .btn,#navbartop .btn_menu_lateraux, #navbartop .nav-link, #navbartop #barre_recherche {
+#navbartop .btn, #navbartop .btn_menu_lateraux, #navbartop .nav-link, #navbartop #barre_recherche {
   margin: 0px 1px;
   padding: 4px 8px;
 }
@@ -52,7 +52,7 @@ nav .form-control {
   border: none;
 }
 
-/* menu intranet navbarleft */
+/* navbarleft */
 #navbarleft {
   width:200px;
   position:absolute;
@@ -70,6 +70,8 @@ nav .form-control {
   width: 100%;
   padding: 0.375rem 0.75rem;
   border-radius: 0px ;
+  border-top: 1px solid rgb(211,17,69);
+  border-bottom: 1px solid rgb(211,17,69);
 }
 
 .navbarleft_menus_peres + div { /* premier élément div enfant de .navbarleft_menus_peres*/
@@ -80,6 +82,8 @@ nav .form-control {
 #navbarleft_menus_enfants {
   flex:1;
   border-radius: 0px 4px 4px 0px;
+  border-top: 1px solid rgb(211,17,69);
+  border-bottom: 1px solid rgb(211,17,69);
 }
 #navbarleft_menus_enfants, #navbarleft .dropdown-menu {
   background-color: white;
@@ -161,10 +165,15 @@ nav .dropdown:hover>.dropdown-menu {
   border-right: none;
 }
 
-#navbartop .dropdown-menu {
+#navbartop .dropdown-menu, #navbarleft .dropdown-menu {
   /* background-color: rgb(211,17,69); */
   border: 1px solid rgb(211,17,69);
 }
+
+#navbarleft .dropdown-menu {
+  border-left: none;
+}
+
 nav .dropdown-menu {
   /* background-color: définit plus haut avec #navbarleft */
   box-shadow: 0px 0px 10px #555;
