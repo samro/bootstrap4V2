@@ -159,8 +159,15 @@ nav .form-control {
 
 
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 481px) and (max-width: 767px) {
+ main{
+  max-width: 100%;
+  background-color: blue;
+ }
 
+ body{
+  max-width: 100%;
+ }
 
 }
 

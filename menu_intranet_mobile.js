@@ -4,9 +4,10 @@ var taille_menu_gauche = ""
 var taille_menu_droit = "";
 var action_utilisateur_droit = "";
 var lg_petit_menu_left = "40px";
+var taille_ecran = $(window).width();
 
 function affiche_menu_enfant() {
-    if ( $(window).width() > 768 ) { //ordinateur
+    if (  taille_ecran > 768 ) { //ordinateur
         $("#navbarleft_menus_peres button").hover(function(event){
             $("#navbarleft_menus_enfants").html( $(this).next().html() );
         });   
@@ -18,21 +19,14 @@ function affiche_menu_enfant() {
 }
 
 function animation_menus_principaux() {
-    var taille_ecran = $(window).width();
+    
 	$("#bouton_menu_gauche").click(function(event){
+        if ( taille_ecran < 481 && taille_ecran >=1263 ) {
+         if(taille_menu_gauche == 'grand' && taille_menu_droit =='grand'){
+             $('main').toggleClass();
+             $('#navbarright').toggleClass();
 
-        if ( taille_ecran < 768 && taille_ecran >=550 ) {
-            if ( $("#navbarleft").css("left") == '0px' ) {
-                action_utilisateur_gauche = "l'utilisateur a masque le menu";
-            } else {
-                action_utilisateur_gauche = "";
-            }
-        } else {
-            if ( $("#navbarleft").css("left") == '0px' ) {
-                action_utilisateur_gauche = "";
-            } else {
-                action_utilisateur_gauche = "l'utilisateur a affiche le menu";     
-            }
+         }
         }
 
         $("main, #navbarleft").css("transition", "left .4s");
@@ -49,14 +43,14 @@ function animation_menus_principaux() {
             if (taille_menu_gauche == 'petit') {
                 $("main").css("left", lg_petit_menu_left);
             } else {
-                $("main").css("left", "200px");
+                $("main").css("left", "490px");
             }
         }
     });
     
     
 	$("#bouton_menu_droit").click(function(event){
-        if ( taille_ecran > 768 ) {
+        if( taille_ecran < 481 && taille_ecran >=767 ){
             if( $("#navbarright").css("right") == '0px' ) {
                 action_utilisateur_droit = "l'utilisateur a masque le menu";
             } else {
@@ -77,6 +71,7 @@ function animation_menus_principaux() {
       } else {
           $("#navbarright").css("right", "0px");
           $("main").css("right", "200px");
+          
       }
     });
 
@@ -93,8 +88,8 @@ function animation_menus_principaux() {
             $("#navbarleft_menus_enfants").css("display", "none");
             taille_menu_gauche = "petit";
         } else {
-            $("#navbarleft").css("width", "200px");
-            $("main").css("left", "200px");
+            $("#navbarleft").css("width", "490px");
+            $("main").css("left", "490px");
             $("#navbarleft_menus_enfants").css("display", "block");
             $("#navbarleft_menus_peres div[aria-labelledby='dropdownMenuButton']").addClass("menu_cache");
             taille_menu_gauche = "grand";
@@ -139,7 +134,7 @@ function taille_fenetre() {
         $("#test_taille").val( $(window).width() );
        
 
-        if($(window).width() <= 768) {
+        if( taille_ecran < 481 && taille_ecran >=767 ) {
             if(action_utilisateur_gauche == "l'utilisateur a affiche le menu" ){
                 $("#navbarleft").css("left", "0px");
                 if (taille_menu_gauche == 'petit') {

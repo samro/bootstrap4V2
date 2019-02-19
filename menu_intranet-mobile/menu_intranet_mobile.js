@@ -20,8 +20,7 @@ function affiche_menu_enfant() {
 function animation_menus_principaux() {
     var taille_ecran = $(window).width();
 	$("#bouton_menu_gauche").click(function(event){
-
-        if ( taille_ecran < 768 && taille_ecran >=550 ) {
+        if ( taille_ecran < 481 && taille_ecran >=767 ) {
             if ( $("#navbarleft").css("left") == '0px' ) {
                 action_utilisateur_gauche = "l'utilisateur a masque le menu";
             } else {
@@ -56,7 +55,7 @@ function animation_menus_principaux() {
     
     
 	$("#bouton_menu_droit").click(function(event){
-        if ( taille_ecran > 768 ) {
+        if( taille_ecran < 481 && taille_ecran >=767 ){
             if( $("#navbarright").css("right") == '0px' ) {
                 action_utilisateur_droit = "l'utilisateur a masque le menu";
             } else {
@@ -139,7 +138,7 @@ function taille_fenetre() {
         $("#test_taille").val( $(window).width() );
        
 
-        if($(window).width() <= 768) {
+        if( taille_ecran < 481 && taille_ecran >=767 ) {
             if(action_utilisateur_gauche == "l'utilisateur a affiche le menu" ){
                 $("#navbarleft").css("left", "0px");
                 if (taille_menu_gauche == 'petit') {
