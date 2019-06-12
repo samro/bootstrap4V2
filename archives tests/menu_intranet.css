@@ -5,6 +5,7 @@
 
 body{
   background-color:rgb(211,17,69);
+  min-width: 1000px;
 }
 main {
   padding: 10px;
@@ -158,8 +159,9 @@ nav .form-control {
 
 
 
-@media screen and (max-width: 768px) {
- 
+@media screen and (min-width: 481px) {
+
+
 }
 
 
@@ -183,7 +185,6 @@ nav .dropdown:hover>.dropdown-menu {
 
 #barre_recherche .form-control {
   padding: 0rem 0.75rem;
-  border: 1px solid blue;
 
 }
 

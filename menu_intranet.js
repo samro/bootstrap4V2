@@ -6,7 +6,7 @@ var action_utilisateur_droit = "";
 var lg_petit_menu_left = "40px";
 
 function affiche_menu_enfant() {
-    if ( $(window).width() > 768 ) { //ordinateur
+    if ( $(window).width() > 768 ) { //tablette et téléphone
         $("#navbarleft_menus_peres button").hover(function(event){
             $("#navbarleft_menus_enfants").html( $(this).next().html() );
         });   
@@ -18,10 +18,8 @@ function affiche_menu_enfant() {
 }
 
 function animation_menus_principaux() {
-    var taille_ecran = $(window).width();
 	$("#bouton_menu_gauche").click(function(event){
-
-        if ( taille_ecran < 768 && taille_ecran >=550 ) {
+        if ( $(window).width() > 768 ) {
             if ( $("#navbarleft").css("left") == '0px' ) {
                 action_utilisateur_gauche = "l'utilisateur a masque le menu";
             } else {
@@ -56,7 +54,7 @@ function animation_menus_principaux() {
     
     
 	$("#bouton_menu_droit").click(function(event){
-        if ( taille_ecran > 768 ) {
+        if ( $(window).width() > 768 ) {
             if( $("#navbarright").css("right") == '0px' ) {
                 action_utilisateur_droit = "l'utilisateur a masque le menu";
             } else {
